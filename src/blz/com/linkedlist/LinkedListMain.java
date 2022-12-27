@@ -9,6 +9,7 @@ public class LinkedListMain {
         LinkedListMain.popFirstElements();
         LinkedListMain.popLastElements();
         LinkedListMain.searchingElements();
+        LinkedListMain.InsertNodeAfter();
 
 
     }
@@ -130,5 +131,18 @@ public class LinkedListMain {
         ll.search(30);
         ll.display();
 
+    }
+
+    public static void InsertNodeAfter() {
+
+        LinkedListOne<Integer> ll = new LinkedListOne<>();
+        ll.append(56);
+        ll.append(30);
+        ll.append(70);
+        System.out.println("the data is : ");
+        ll.display();// using the output of appendingTheElements method
+        ll.insert(1, 40);
+        System.out.println("Required output is : 56->30->40->70 \nthe index of value 30 is 1...so after inserting 40 at index 2 we get the list as :  ");
+        ll.display();
     }
 }
