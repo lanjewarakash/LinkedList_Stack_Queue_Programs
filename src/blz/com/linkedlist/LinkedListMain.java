@@ -5,6 +5,7 @@ public class LinkedListMain {
         LinkedListMain.CreateSimpleLinkedList();
         LinkedListMain.addingElements();
         LinkedListMain.appendingElements();
+        LinkedListMain.insertingElements();
 
     }
 
@@ -56,6 +57,22 @@ public class LinkedListMain {
         ll.display();
         System.out.println("while appending, the new elements will get added to the end position" +
                 "\nso required output is ====> 56,30,70");
+        ll.display();
+    }
+
+    public static void insertingElements() {
+
+        LinkedListOne<Integer> ll = new LinkedListOne<>();
+        ll.append(56);
+        System.out.println("After append 56");
+        ll.display();
+        ll.append(70);
+        System.out.println("After append 70");
+        ll.display();
+        System.out.println("Before inserting the elements are=");
+        ll.display();
+        ll.insertAfter(ll.head, 30);
+        System.out.println("inserting 30 between 56 and 70");
         ll.display();
     }
 }
