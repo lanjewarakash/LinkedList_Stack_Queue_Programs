@@ -10,6 +10,7 @@ public class LinkedListMain {
         LinkedListMain.popLastElements();
         LinkedListMain.searchingElements();
         LinkedListMain.InsertNodeAfter();
+        LinkedListMain.deleteAndShowSize();
 
 
     }
@@ -144,5 +145,20 @@ public class LinkedListMain {
         ll.insert(1, 40);
         System.out.println("Required output is : 56->30->40->70 \nthe index of value 30 is 1...so after inserting 40 at index 2 we get the list as :  ");
         ll.display();
+    }
+
+    public static void deleteAndShowSize() {
+        LinkedListOne<Integer> ll = new LinkedListOne<>();
+        ll.append(56);
+        ll.append(30);
+        ll.append(40);
+        ll.append(70);
+        System.out.println("data is: ");
+        ll.display();
+
+        ll.deleteNode(40);
+        System.out.println("data and size after deleting element 40 \n ");
+        ll.display();
+        ll.size();
     }
 }

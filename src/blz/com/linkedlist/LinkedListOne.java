@@ -81,6 +81,31 @@ public class LinkedListOne<T> {
         temp.next = node;
     }
 
+    public void deleteNode(T key) {
+        Node<T> tempNode = search(key);
+        Node<T> prevNode = head;
+        while (prevNode != null) {
+            if (prevNode == tempNode) {
+                head = tempNode.next;
+                break;
+            } else if (prevNode.next == tempNode) {
+                prevNode.next = tempNode.next;
+                tempNode.next = null;
+            }
+            prevNode = prevNode.next;
+        }
+    }
+
+    public void size() {
+        Node<T> tempNode = head;
+        int count = 0;
+        while (tempNode != null) {
+            count++;
+            tempNode = tempNode.next;
+        }
+        System.out.println("Size of the linked list is: " + count);
+    }
+
     public void display() {
         Node<T> tempNode = head;
         while (tempNode != null) {
