@@ -58,6 +58,18 @@ public class LinkedListOne<T> {
         return tempNode.key;
     }
 
+    public Node<T> search(T data) {
+        Node<T> tempNode = head;
+        while (tempNode != null) {
+            if (tempNode.key == data) {
+                System.out.println("Key found" + data);
+                break;
+            }
+            tempNode = tempNode.next;
+        }
+        return tempNode;
+    }
+
     public void display() {
         Node<T> tempNode = head;
         while (tempNode != null) {

@@ -8,6 +8,8 @@ public class LinkedListMain {
         LinkedListMain.insertingElements();
         LinkedListMain.popFirstElements();
         LinkedListMain.popLastElements();
+        LinkedListMain.searchingElements();
+
 
     }
 
@@ -115,5 +117,18 @@ public class LinkedListMain {
         System.out.println("Pop value is : " + ll.popLast());
         System.out.println("after deleting it shows");
         ll.display();
+    }
+
+    public static void searchingElements() {
+
+        LinkedListOne<Integer> ll = new LinkedListOne<>();
+        ll.append(56);
+        ll.append(30);
+        ll.append(70);
+
+        System.out.println("searching for key 30 :");
+        ll.search(30);
+        ll.display();
+
     }
 }
