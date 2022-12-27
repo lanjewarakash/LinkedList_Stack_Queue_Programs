@@ -5,7 +5,7 @@ public class Node<T> {
     T key;
     Node<T> next;
 
-    public Node(T key) {
+    public Node() {
         this.key = key;
     }
 }
