@@ -49,6 +49,15 @@ public class LinkedListOne<T> {
         return tempNode.key;
     }
 
+    public T popLast() {
+        Node<T> tempNode = head;
+        while (tempNode.next.next != null) {
+            tempNode = tempNode.next;
+        }
+        tempNode.next = null;
+        return tempNode.key;
+    }
+
     public void display() {
         Node<T> tempNode = head;
         while (tempNode != null) {
