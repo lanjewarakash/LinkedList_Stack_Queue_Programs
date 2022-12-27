@@ -33,6 +33,13 @@ public class LinkedListOne<T> {
         }
     }
 
+    public void insertAfter(Node<T> prevNode, T key) {
+        Node<T> newNode = new Node<T>();
+        newNode.key = key;
+        newNode.next = prevNode.next;
+        prevNode.next = newNode;
+    }
+
     public void display() {
         Node<T> tempNode = head;
         while (tempNode != null) {
