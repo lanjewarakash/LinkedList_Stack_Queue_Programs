@@ -40,6 +40,15 @@ public class LinkedListOne<T> {
         prevNode.next = newNode;
     }
 
+    public T pop() {
+        if (head == null) {
+            return null;
+        }
+        Node<T> tempNode = head;
+        head = head.next;
+        return tempNode.key;
+    }
+
     public void display() {
         Node<T> tempNode = head;
         while (tempNode != null) {
