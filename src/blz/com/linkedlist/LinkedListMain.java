@@ -7,6 +7,7 @@ public class LinkedListMain {
         LinkedListMain.appendingElements();
         LinkedListMain.insertingElements();
         LinkedListMain.popFirstElements();
+        LinkedListMain.popLastElements();
 
     }
 
@@ -93,6 +94,26 @@ public class LinkedListMain {
         ll.display();
         System.out.println("required output sequence (after deleting first element ) ==> 30,70");
         System.out.println("Pop value is : " + ll.pop());
+        ll.display();
+    }
+
+    public static void popLastElements() {
+
+        LinkedListOne<Integer> ll = new LinkedListOne<>();
+        ll.append(56);
+        System.out.println("after append 56");
+        ll.display();
+        ll.append(30);
+        System.out.println("after append 30");
+        ll.display();
+        ll.append(70);
+        System.out.println("after append 70");
+        ll.display();
+        System.out.println("data is : ");
+        ll.display();
+        System.out.println("required output sequence (after deleting last element ) ==> 56,30");
+        System.out.println("Pop value is : " + ll.popLast());
+        System.out.println("after deleting it shows");
         ll.display();
     }
 }
